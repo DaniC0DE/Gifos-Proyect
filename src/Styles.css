@@ -1,38 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: none;
+}
 .App {
+  font-family: sans-serif;
   text-align: center;
+  transition: background-color 0.6s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.HeaderContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.Header-title {
+  font-size: 20px;
+  margin-left: 80px;
+}
+
+.Header-button {
+  border-style: none;
+  border: #572ee5 solid 1px;
+  border-radius: 30px;
+  color: #572ee5;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: white;
+  margin-right: 80px;
+  margin-top: 30px;
+  padding: 10px;
+  height: 50px;
+}
+
+.Header-button:hover {
+  background-color: #9d89e6;
+  color: white;
+  border: white;
+}
+
+.Search-title {
+  color: #572ee5;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.inputsContainer {
+  height: 60px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.Search-inputtext {
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  height: 30px;
+  width: 400px;
+  padding: 5px;
+  padding-left: 30px;
+  font-size: 16px;
+  outline: none;
+}
+
+.Search-submit {
+  border-style: none;
+  border: #572ee5 solid 2px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: #572ee5;
+  background-color: white;
+  height: 44px;
+  width: 100px;
+  padding: 5px;
+}
+
+.Search-submit:hover {
+  background-color: #bbb0e2;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.SuggestBar {
+  width: 420px;
+  background-color: rgb(255, 255, 255);
+  border: black 1px solid;
+  border-radius: 10px;
+  position: absolute;
+  top: 462px;
+  left: 420px;
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.suggest:hover {
+  background-color: #9d89e6;
+  border-radius: 15px;
+}
+
+.CC-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.GalleryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  background-color: #816ad5;
+  width: 90%;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+.GifsContainer {
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+}
+
+.Gifs {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.blank-container {
+  margin: 10px;
+  padding: 10px;
+}
+
+.nofound-container {
+  margin: 10px;
+  padding: 10px;
+}
+
+.blank-title {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  margin: 10px;
+  padding: 10px;
+}
+
+.notfound-title {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* STYLOS DARK */
+
+.dark .Header-button {
+  border: white solid 1px;
+  color: white;
+  background-color: rgb(44, 44, 44);
+}
+
+.dark .Header-button:hover {
+  background-color: rgb(121, 121, 121);
+}
+
+.dark .Search-title {
+  color: white;
+}
+
+.dark .Search-inputtext {
+  border: rgb(121, 121, 121) 1px solid;
+  padding: 6px;
+  padding-left: 30px;
+}
+
+.dark .Search-submit {
+  border: rgb(121, 121, 121) solid 1px;
+  background-color: white;
+}
+.dark .Gallery-title {
+  color: white;
+}
+
+.dark .GalleryContainer {
+  background-color: rgb(34, 34, 34);
+}
+.App.dark {
+  background-color: rgb(44, 44, 44);
 }

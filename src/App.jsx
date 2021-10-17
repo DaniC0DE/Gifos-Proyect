@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "./Header";
 import Search from "./Search";
 import Gallery from "./Gallery";
-import "./Styles.css";
+import "./styles.css";
 
 function App() {
   const [search, setSearch] = useState(false);
@@ -12,6 +12,10 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [noResults, setNoResults] = useState(false);
+  const [suggestion, setSuggestion] = useState([]);
+  const [showSuggestion, setShowSuggestion] = useState(false);
+  const [selectSuggest, setSelectSuggest] = useState("");
+  const [autocomplete, setAutocomplete] = useState(false);
 
   let sinResultados = [];
 
@@ -31,6 +35,14 @@ function App() {
         setNoResults={setNoResults}
         loading={loading}
         setLoading={setLoading}
+        suggestion={suggestion}
+        setSuggestion={setSuggestion}
+        showSuggestion={showSuggestion}
+        setShowSuggestion={setShowSuggestion}
+        selectSuggest={selectSuggest}
+        setSelectSuggest={setSelectSuggest}
+        autocomplete={autocomplete}
+        setAutocomplete={setAutocomplete}
       />
       <Gallery
         sinResultados={sinResultados}
