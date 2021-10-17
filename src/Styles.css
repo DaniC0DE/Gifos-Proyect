@@ -157,6 +157,10 @@
 
 /* STYLOS DARK */
 
+.App.dark {
+  background-color: rgb(44, 44, 44);
+}
+
 .dark .Header-button {
   border: white solid 1px;
   color: white;
@@ -188,6 +192,4 @@
 .dark .GalleryContainer {
   background-color: rgb(34, 34, 34);
 }
-.App.dark {
-  background-color: rgb(44, 44, 44);
-}
+

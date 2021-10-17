@@ -20,7 +20,7 @@ function App() {
   let sinResultados = [];
 
   return (
-    <div className="App">
+    <div className={`App ${isDarkMode ? "dark" : "light"}`}>
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Search
         search={search}

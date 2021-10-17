@@ -3,7 +3,7 @@ import GifosD from "./svg/gifosDark.svg";
 import "./styles.css";
 
 function Header(props) {
-  const handleDark = (props) => {
+  const handleDark = () => {
     props.setIsDarkMode(!props.isDarkMode);
   };
 
